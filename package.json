@@ -1,0 +1,20 @@
+{
+  "name": "Messenger",
+  "version": "1.0.0",
+  "description": "Messenger App",
+  "main": "server.js",
+  "type": "module",
+  "scripts": {
+    "start": "node backend/server",
+    "server": "nodemon server/server",
+    "client": "npm start --prefix client",
+    "file": "npm start --prefix file_share",
+    "dev": "concurrently \"npm run server\" \"npm run client\" "
+  },
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "concurrently": "^6.5.1",
+    "nodemon": "^2.0.15"
+  }
+}
