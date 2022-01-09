@@ -38,7 +38,13 @@ const Welcome = () => {
             <div className='auth__form-container_fields-content_button'>
             <Link to='/getIp'><button>For Receive file</button></Link>
             </div>
-            
+            <br />
+            <div className='auth__form-container_fields-content_button'>
+            <a target="_blank" href={`http://${window.location.hostname}:3006/`}>
+            <button>For Group Chat</button>
+            </a>
+            </div>
+            <br />
         </div>
     );
 };

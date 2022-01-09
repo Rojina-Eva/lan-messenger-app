@@ -9,7 +9,9 @@
     "server": "nodemon server/server",
     "client": "npm start --prefix client",
     "file": "npm start --prefix file_share",
-    "dev": "concurrently \"npm run server\" \"npm run client\" \"npm run file\""
+    "group": "node group/server",
+    "groupclient": "npm start --prefix groupclient",
+    "dev": "concurrently \"npm run client\" \"npm run file\" \"npm run group\" \"npm run groupclient\""
   },
   "author": "",
   "license": "ISC",
