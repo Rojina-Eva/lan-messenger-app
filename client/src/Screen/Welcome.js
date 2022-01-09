@@ -1,17 +1,26 @@
 import React from 'react';
-import { Link } from 'react-router-dom';
-
+import { Link, useLocation } from 'react-router-dom';
+// var network = require('network');
+// import network from 'network'
+// import '../App.css'
 
 const Welcome = () => {
+
+    // alert(window.location.hostname);
+
     return (
+
         <div className={{display: 'flex',
             alignItems: 'center'}}>
                 <h1>Institutional Lan Messenger</h1>
+                <h4>Host: {window.location.href}</h4>
 
             <div className='auth__form-container_fields-content_button'>
-            <Link to='/messenger'>
-                <button>Messenger in Lan</button>
-            </Link>
+            {/* <Link to='/messenger'> */}
+            <a target="_blank" href={`http://${window.location.hostname}:3000/messenger`}>
+            <button>Messenger in Lan</button>
+            </a>
+            {/* </Link> */}
             </div>
             <br />
             <div className='auth__form-container_fields-content_button'>
@@ -21,7 +30,7 @@ const Welcome = () => {
             </div>
             <br />
             <div className='auth__form-container_fields-content_button'>
-            <a target="_blank" href="http://localhost:5000/">
+            <a target="_blank" href={`http://${window.location.hostname}:5000/`}>
             <button>For File Share</button>
             </a>
             </div>
